@@ -12,9 +12,7 @@ int main(void)
 
 	while (i <= 122)
 	{
-		if (i == 101 || i == 113)
-			continue;
-		else
+		if (i != 101 && i != 113)
 			putchar(i);
 		i++;
 	}
