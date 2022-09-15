@@ -5,7 +5,7 @@
 * @size: size is the size of the triangle
 * If size is 0 or less, the function should print only a new line
 * Use the character # to print the triangle
-* 
+*
 * Return: Nothing
 */
 void print_triangle(int size)
