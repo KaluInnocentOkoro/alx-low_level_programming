@@ -16,24 +16,23 @@ void print_number(int n)
 		_putchar('-');
 		n = n * -1;
 	}
-/**
-*	num = n;
-*
-*	while (num / 10 != 0)
-*	{
-*		num = num / 10;
-*		place_value = place_value * 10;
-*	}
-*
-*	while (place_value > 0)
-*	{
-*		val = n / place_value;
-*		_putchar((val) + '0');
-*		n = n - (val * place_value);
-*		place_value = place_value / 10;
-*
-*	}
-*/
+
+	num = n;
+
+	while (num / 10 != 0)
+	{
+		num = num / 10;
+		place_value = place_value * 10;
+	}
+
+	while (place_value > 0)
+	{
+		val = n / place_value;
+		_putchar((val) + '0');
+		n = n - (val * place_value);
+		place_value = place_value / 10;
+	}
+
 	if (n / 10)
 	{
 		print_number(n / 10);
