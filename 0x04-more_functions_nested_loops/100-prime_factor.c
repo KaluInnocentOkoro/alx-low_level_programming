@@ -10,7 +10,7 @@ int main(void)
 	long num  = 612852475143;
 	long i, max, maxfact = 1;
 
-	for (i = 2; i <= num /2; i++)
+	for (i = 2; i <= num / 2; i++)
 	{
 		if (num % i == 0)
 		{
