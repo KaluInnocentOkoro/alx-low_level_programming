@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
-* main - program that finds and prints the sum of the even-valued terms of a fibonacci series,
+* main - program that finds and prints the sum of
+* the even-valued terms of a fibonacci series,
 * followed by a new line.
 *
 * Return: 0 always
