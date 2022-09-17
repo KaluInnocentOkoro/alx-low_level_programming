@@ -10,14 +10,15 @@
 */
 int main(void)
 {
-	long f1 = 0, f2 = 1, fn, sum = 0;
+	long f1 = 0, f2 = 1, fn = 0, sum = 0;
 
-	for (fn = 0; fn <= 4000000; fn = f1 + f2)
+	while (fn <= 4000000)
 	{
+		fn = f1 + f2;
+		if (fn % 2 == 0)
+			sum += fn;
 		f1 = f2;
 		f2 = fn;
-		if (f1 % 2 == 0)
-			sum += f1;
 
 	}
 	printf("%lu\n", sum);
