@@ -3,7 +3,7 @@
 /**
 * _strcmp - function compares two strings
 * @s1: first string to be compared
-* @sw: 2nd string to be compared
+* @s2: 2nd string to be compared
 *
 * Return: 0 if the strings are same, -1 otherwise
 */
