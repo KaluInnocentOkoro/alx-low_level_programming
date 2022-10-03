@@ -17,9 +17,9 @@ int is_prime_number(int n)
 }
 
 /**
-* primer _ function checks for prime number
+* primer - function checks for prime number
 * @num: number to checked
-* @div: The begining divisor
+* @p: The begining divisor
 * Return: 1 if prime , 0 otherwise
 */
 int primer(int num, int p)

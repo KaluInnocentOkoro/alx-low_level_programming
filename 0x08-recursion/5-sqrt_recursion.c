@@ -18,7 +18,7 @@ int _sqrt_recursion(int n)
 
 /**
 * sq - function finds the natural square root of a number
-* @n: number whose square root we find
+* @num: number whose square root we find
 * @root: Possible root of the number
 * Return: returns natural square root of the number if it exist
 * or -1 otherwise
