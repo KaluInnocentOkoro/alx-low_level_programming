@@ -3,7 +3,7 @@
 /**
 * alloc_grid - Function returns a pointer to a 2 dimensional array of integers.
 * @width: column of tge array
-* height: row of the array
+* @height: row of the array
 * Return: A pointer to a 2d array
 */
 int **alloc_grid(int width, int height)
@@ -14,7 +14,7 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	ar = malloc(sizeof(int*) * height);
+	ar = malloc(sizeof(int *) * height);
 	if (ar == NULL)
 		return (NULL);
 

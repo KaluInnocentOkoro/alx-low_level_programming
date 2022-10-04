@@ -6,7 +6,7 @@
 * @s2: second atring for concatenation
 *
 * Return: A pointer to the memory location of the concatenated string
-* 	NULL on failure
+* NULL on failure
 */
 char *str_concat(char *s1, char *s2)
 {
