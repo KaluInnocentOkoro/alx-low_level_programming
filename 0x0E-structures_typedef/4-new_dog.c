@@ -9,30 +9,30 @@
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog;
+	dog_t *d;
 
-	dog = malloc(sizeof(dog_t));
-	if (dog == NULL)
+	d = malloc(sizeof(dog_t));
+	if (d == NULL)
 		return (NULL);
 
-	dog->name = malloc(sizeof(char) * str_len(name) + 1);
-	if (dog->name == NULL)
+	d->name = malloc(sizeof(char) * str_len(name) + 1);
+	if (d->name == NULL)
 	{
-		free(dog);
+		free(d);
 		return (NULL);
 	}
-	dog->name = str_cpy(dog->name, name);
-	dog->owner = malloc(sizeof(char) * str_len(owner) + 1);
-	if (dog->owner == NULL)
+	d->name = str_cpy(d->name, name);
+	d->owner = malloc(sizeof(char) * str_len(owner) + 1);
+	if (d->owner == NULL)
 	{
-		free(dog->name);
-		free(dog);
+		free(d->name);
+		free(d);
 		return (NULL);
 	}
-	dog->owner = str_cpy(dog->owner, owner);
-	dog->age = age;
+	d->owner = str_cpy(d->owner, owner);
+	d->age = age;
 
-	return (dog);
+	return (d);
 }
 /**
 * str_len - function finds the length od a string
@@ -61,7 +61,7 @@ char *str_cpy(char *s1, char *s2)
 	int i;
 
 	for (i = 0; s2[i]; i++)
-		s1[i] = s2[i];
-	s1[i] = '\0';
+		*(s1 + i) = *(s2 + i);
+	*(s1 + i) = '\0';
 	return (s1);
 }
