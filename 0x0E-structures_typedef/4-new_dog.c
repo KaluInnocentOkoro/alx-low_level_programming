@@ -25,7 +25,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog->owner = malloc(sizeof(char) * str_len(dog->owner) + 1);
 	if (dog->owner == NULL)
 	{
-		free(dog->owner);
+		free(dog->name);
 		free(dog);
 		return (NULL);
 	}
@@ -41,11 +41,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 */
 int str_len(char *str)
 {
-	int i;
+	int len = 0;
 
-	for (i = 0; str[i]; i++)
-		;
-	return (i);
+	if (*str)
+	{
+		len++;
+		str++;
+	}
+	return (len);
 }
 /**
 * str_cpy - function copies a string
