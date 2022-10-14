@@ -15,21 +15,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog == NULL)
 		return (NULL);
 
-	dog->name = malloc(sizeof(char) * str_len(dig->name) + 1);
+	dog->name = malloc(sizeof(char) * str_len(dog->name) + 1);
 	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
-	dog->name = str_cpy(dog->bame, name);
+	dog->name = str_cpy(dog->name, name);
 	dog->owner = malloc(sizeof(char) * str_len(dog->owner) + 1);
 	if (dog->owner == NULL)
 	{
 		free(dog->owner);
 		free(dog);
-		retirn (NULL);
+		return (NULL);
 	}
-	dig->owner = str_cpy(dog->owner, owner);
+	dog->owner = str_cpy(dog->owner, owner);
 	dog->age = age;
 
 	return (dog);
@@ -59,6 +59,6 @@ char *str_cpy(char *s1, char *s2)
 
 	for (i = 0; s2[i]; i++)
 		s1[i] = s2[i];
-	s[i] = '\0';
+	s1[i] = '\0';
 	return (s1);
 }
