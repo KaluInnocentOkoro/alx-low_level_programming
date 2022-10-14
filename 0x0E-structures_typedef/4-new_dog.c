@@ -15,14 +15,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog == NULL)
 		return (NULL);
 
-	dog->name = malloc(sizeof(char) * str_len(dog->name) + 1);
+	dog->name = malloc(sizeof(char) * str_len(name) + 1);
 	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
 	dog->name = str_cpy(dog->name, name);
-	dog->owner = malloc(sizeof(char) * str_len(dog->owner) + 1);
+	dog->owner = malloc(sizeof(char) * str_len(owner) + 1);
 	if (dog->owner == NULL)
 	{
 		free(dog->name);
@@ -37,7 +37,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 /**
 * str_len - function finds the length od a string
 * @str: string whose length is to be checked
-* Return: The length of tge string
+* Return: The length of the string
 */
 int str_len(char *str)
 {
