@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
-* print_before_main: function prints a text before main function is executed
-* * Return: Void
+* before_main: function prints a text before main function is executed
+* Return: Void
 */
 void before_main(void) __attribute__ ((constructor));
 void before_main(void)
