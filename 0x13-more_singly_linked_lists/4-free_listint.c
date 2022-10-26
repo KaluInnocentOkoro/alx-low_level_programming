@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-* Function frees a listint_t list.
+* free_listint - Function frees a listint_t list.
 * @head: A pointer to the start of the node
 * Return: Void
 */
