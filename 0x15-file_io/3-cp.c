@@ -60,11 +60,11 @@ int main (int argc, char *argv[])
 	open2 = open(argv[2], O_CREAT | O_RDONLY  | O_TRUNC, 0664);
 	do
 	{
-		if (open1 = -1 || _read = -1)
+		if (open1 == -1 || _read  == -1)
 		{
 			dprintf(STDERR_FILENO,
 	"Error: Can't read from file %s\n", argv[1]);
-			free(mem);
+			free(buffer);
 			exit(98);
 		}
 		_write = write(open2, buffer, _read);
@@ -72,7 +72,7 @@ int main (int argc, char *argv[])
 		{
 			dprintf(STDERR_FILENO,
 	"Error: Can't write to %s\n", argv[2]);
-			free(mem);
+			free(buffer);
 			exit(99);
 		}
 		_read = read(open1, buffer, 1024);
