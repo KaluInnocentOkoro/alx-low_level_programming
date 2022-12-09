@@ -30,6 +30,7 @@ char *alloc(char *filename)
 void _close(int d)
 {
 	int cl = close(d);
+
 	if (cl == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", d);
@@ -43,7 +44,7 @@ void _close(int d)
 * @argv: List of arguments passed to the program
 * Return: 0 Always
 */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int open1, open2, _read, _write;
 	char *buffer;
@@ -58,8 +59,7 @@ int main (int argc, char *argv[])
 	open1 = open(argv[1], O_RDONLY);
 	_read = read(open1, buffer, 1024);
 	open2 = open(argv[2], O_CREAT | O_RDONLY  | O_TRUNC, 0664);
-	do
-	{
+	do {
 		if (open1 == -1 || _read  == -1)
 		{
 			dprintf(STDERR_FILENO,
